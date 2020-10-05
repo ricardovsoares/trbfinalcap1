@@ -15,7 +15,7 @@ import org.springframework.transaction.annotation.Transactional;
 import br.com.cirros.trbfinalcap1.dto.ClientDTO;
 import br.com.cirros.trbfinalcap1.entities.Client;
 import br.com.cirros.trbfinalcap1.repositories.ClientRepository;
-import br.com.cirros.trbfinalcap1.services.exception.ResourceNotFoundException;
+import br.com.cirros.trbfinalcap1.services.exceptions.ResourceNotFoundException;
 
 @Service
 public class ClientService {
@@ -29,6 +29,7 @@ public class ClientService {
 //		return list.stream().map(x -> new ClientDTO(x)).collect(Collectors.toList());
 //	}
 	
+	@Transactional(readOnly = true)
 	public List<Client> findAll(){
 		return repository.findAll();
 	}

@@ -1,4 +1,4 @@
-package br.com.cirros.trbfinalcap1.services.exception;
+package br.com.cirros.trbfinalcap1.services.exceptions;
 
 public class ResourceNotFoundException extends RuntimeException {
 
